@@ -100,7 +100,7 @@ taxonomies = [{ name = "tags", feed = true }]
 accent_color = "#ff7800"
 # Ditto but for the dark theme.
 # If not set regular variant will be used.
-accent_color_dark = "#ffa348"
+accent_color_dark = "#0ff"
 # Whether to use fonts bundled with Duckquill instead of system ones.
 # Keep in mind that it also changes the style of headings.
 #
