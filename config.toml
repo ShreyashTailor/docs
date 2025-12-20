@@ -111,9 +111,9 @@ accent_color_dark = "#0ff"
 #
 emoji_favicon = "😁"#
 # URL to website's issue tracker
-issues_url = "https://github.com/is-an-ai-dev/website/issues"
+issues_url = "https://github.com/is-an-ai-dev/docs/issues"
 # URL to website's source code
-source_url = "https://github.com/is-an-ai-dev/website"
+source_url = "https://github.com/is-an-ai-dev/docs"
 # Additional CSS styles; expects them to be in the "./static/" directory.
 # If you are using Sass it will be generated there automatically.
 #
