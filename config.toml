@@ -1,6 +1,6 @@
 title = "is-an-ai.dev"
 base_url = "https://docs.is-an-ai.dev"
-description = "Free Sub domains for devlopers"
+description = "Free Subdomains for devlopers"
 
 theme = "duckquill"
 compile_sass = true
@@ -40,60 +40,60 @@ github_alerts = true
 # index_format = "elasticlunr_json"
 index_format = "fuse_json"
 
-[languages.ar]
-title = "Duckquill"
-description = "سمة زولا العصرية والحديثة والجميلة والنظيفة."
-generate_feeds = true
-
-taxonomies = [{ name = "tags", feed = true }]
-
-[languages.es]
-title = "Duckquill"
-description = "Tema Zola de opinión, moderno, bonito y limpio."
-generate_feeds = true
-
-taxonomies = [{ name = "tags", feed = true }]
-
-[languages.fr]
-title = "Duckquill"
-description = "Un thème affirmé, moderne, beau et clair pour Zola."
-generate_feeds = true
-
-taxonomies = [{ name = "tags", feed = true }]
-
-
-[languages.ms]
-title = "Duckquill"
-description = "Tema Zola yang berpandangan, moden, cantik dan bersih."
-generate_feeds = true
-
-taxonomies = [{ name = "tags", feed = true }]
-
-[languages.ru]
-title = "Duckquill"
-description = "Мнимая, современная, симпатичная, и аккуратная тема Zola."
-generate_feeds = true
-
-taxonomies = [{ name = "tags", feed = true }]
-
-[languages.fa]
-title = "Duckquill"
-description = "پوسته ای صاحب نظر، به‌روز، زیبا و تمیز برای Zola."
-generate_feeds = true
-
-taxonomies = [{ name = "tags", feed = true }]
-
-[languages.zh-Hans]
-title = "Duckquill"
-description = "有主见、现代、漂亮、简洁的 Zola 主题。"
-generate_feeds = true
-
-taxonomies = [{ name = "tags", feed = true }]
-
+# [languages.ar]
+# title = "Duckquill"
+# description = "سمة زولا العصرية والحديثة والجميلة والنظيفة."
+# generate_feeds = true
+#
+# taxonomies = [{ name = "tags", feed = true }]
+#
+# [languages.es]
+# title = "Duckquill"
+# description = "Tema Zola de opinión, moderno, bonito y limpio."
+# generate_feeds = true
+#
+# taxonomies = [{ name = "tags", feed = true }]
+#
+# [languages.fr]
+# title = "Duckquill"
+# description = "Un thème affirmé, moderne, beau et clair pour Zola."
+# generate_feeds = true
+#
+# taxonomies = [{ name = "tags", feed = true }]
+#
+#
+# [languages.ms]
+# title = "Duckquill"
+# description = "Tema Zola yang berpandangan, moden, cantik dan bersih."
+# generate_feeds = true
+#
+# taxonomies = [{ name = "tags", feed = true }]
+#
+# [languages.ru]
+# title = "Duckquill"
+# description = "Мнимая, современная, симпатичная, и аккуратная тема Zola."
+# generate_feeds = true
+#
+# taxonomies = [{ name = "tags", feed = true }]
+#
+# [languages.fa]
+# title = "Duckquill"
+# description = "پوسته ای صاحب نظر، به‌روز، زیبا و تمیز برای Zola."
+# generate_feeds = true
+#
+# taxonomies = [{ name = "tags", feed = true }]
+#
+# [languages.zh-Hans]
+# title = "Duckquill"
+# description = "有主见、现代、漂亮、简洁的 Zola 主题。"
+# generate_feeds = true
+#
+# taxonomies = [{ name = "tags", feed = true }]
+#
 [extra]
 # Which theme should be used by default (light/dark).
 #
-# default_theme = "dark"
+default_theme = "dark"
 #
 # Sets theme and browser theme color.
 # See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
@@ -109,12 +109,11 @@ accent_color_dark = "#0ff"
 # Use emoji as a favicon.
 # Only one emoji is being rendered, everything else is truncated.
 #
-# emoji_favicon = "🦆🪶"
-#
+emoji_favicon = "😁"#
 # URL to website's issue tracker
-issues_url = "https://codeberg.org/daudix/duckquill/issues"
+issues_url = "https://github.com/is-an-ai-dev/website/issues"
 # URL to website's source code
-source_url = "https://codeberg.org/daudix/duckquill"
+source_url = "https://github.com/is-an-ai-dev/website"
 # Additional CSS styles; expects them to be in the "./static/" directory.
 # If you are using Sass it will be generated there automatically.
 #
@@ -132,7 +131,7 @@ source_url = "https://codeberg.org/daudix/duckquill"
 #
 # Whether to show "copy code" button on all code blocks
 # that have the language set.
-# See https://www.getzola.org/documentation/content/syntax-highlighting/
+# See https://www.getzola.org/documentation/cveontent/syntax-highlighting/
 show_copy_button = true
 # Whether to show estimated read time in posts.
 show_reading_time = true
@@ -196,14 +195,22 @@ show_repo = true
 # For local files use same link format as in Markdown,
 # i.e. "@/blog/_index.md".
 # See https://www.getzola.org/documentation/content/linking/#internal-links
-# links = [
-# 	{ name = "Links", menu = [
-# 		{ url = "@/blog/_index.md", name = "Blog" },
+links = [
+	{ name = "Quick Start", menu = [
+		{ url = "@/quickstart/guide/index.md", name = "Getting Started" },
+		{ url = "@/quickstart/format/index.md", name = "Request Format" },
+		{ url = "@/quickstart/faq/index.md", name = "FAQ" },
 # 		{ url = "@/demo/index.md", name = "Demo" },
 # 		{ url = "@/mods/index.md", name = "Mods" }
-# 	] },
+	] },
+
+	{ name = "Guides", menu = [
+		{ url = "@/guides/github/index.md", name = "Github Pages" },
+		{ url = "@/guides/cloudflare/index.md", name = "Cloudflare Pages" },
+
+	] },
 # 	{ url = "https://daudix.one/coffee/", name = "Coffee" }
-# ]
+]
 
 [extra.footer]
 # Links used in the footer.
@@ -228,12 +235,12 @@ socials = [
 # Whether to show "© Title, YEAR"
 show_copyright = true
 # Whether to show "Powered by Zola and Duckquill"
-show_powered_by = true
+show_powered_by = false
 # Whether to show link to website source
-show_source = false
+show_source = true
 # Custom copyright text
 #
-# copyright = "© *Aperture* **Science** ~~Innovators~~, `1972`"
+copyright = "© is-an-ai.dev,`2025`"
 
 # Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
 #

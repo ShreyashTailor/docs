@@ -18,11 +18,17 @@ styles = ["home/style.scss"]
 
 {% end %}
 
-# What is this?
+# <mark>is-an-ai.dev</mark> Documentation
 
-<mark>is-an-ai.dev</mark> is a free subdomain for devlopers and open source contibutors.
+Here you'll find detailed guides, the JSON file structure, and more. If you'd like to contribute to our documentation, visit our documentation repository on GitHub.
 
-# Welcome to Docs Page
+# How to Register
 
-- [Setup](https://exmaple.com)
-- [Installation](https://exmaple.com)
+For our Quick Start guide you can click [here](@/quickstart/guide/index.md) to read it. You can also read about the domains' JSON file structure [here](@/quickstart/format/index.md).
+
+# Guides
+
+- [Github Pages](@/guides/github/index.md)
+- [Cloudflare Pages](@/guides/cloudflare/index.md)
+
+More guides will be added soon.
