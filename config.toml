@@ -1,6 +1,6 @@
-title = "is-an-ai.dev"
+title = "docs.is-an-ai.dev"
 base_url = "https://docs.is-an-ai.dev"
-description = "Free Subdomains for devlopers"
+description = "Documentation for is-an-ai.dev"
 
 theme = "duckquill"
 compile_sass = true
