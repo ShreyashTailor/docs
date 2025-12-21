@@ -237,7 +237,7 @@ show_copyright = true
 # Whether to show "Powered by Zola and Duckquill"
 show_powered_by = false
 # Whether to show link to website source
-show_source = true
+show_source = false
 # Custom copyright text
 #
 copyright = "© is-an-ai.dev,`2025`"
