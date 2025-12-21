@@ -42,5 +42,5 @@ Because you broke one of our [rules](https://github.com).
 #### Q. Why are there so many restrictions on NS records?
 
 **Ans :**
-NS records effectively delegate full DNS control of a subdomain to external nameservers. This can be easily abused for phishing, malware, spam, or other malicious activities, and can also impact the reputation and security of the parent domain.  
+NS records effectively delegate full DNS control of a subdomain to external nameservers. This can be easily abused for phishing, malware, spam, or other malicious activities, and can also impact the reputation and security of the parent domain.
 Because of this, NS records are restricted and only granted on a case-by-case basis to trusted users with a valid reason.

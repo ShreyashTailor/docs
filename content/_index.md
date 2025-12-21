@@ -24,7 +24,7 @@ Here you'll find detailed guides, the JSON file structure, and more. If you'd li
 
 # How to Register
 
-For our Quick Start guide you can click [here](@/quickstart/guide/index.md) to read it. You can also read about the domains' JSON file structure [here](@/quickstart/format/index.md).
+For our Quick Start guide you can click [here](@/quickstart/gettingstarted/index.md) to read it. You can also read about the domains' JSON file structure [here](@/quickstart/format/index.md).
 
 # Guides
 

@@ -20,7 +20,7 @@ Fork our github [repository](https://github.com/is-an-ai-dev/register).
 
 <li>
 
-Create a new file named <mark>your-subdomain.json</mark> in <mark>domains/</mark> directory following all the valid rules listed in [Request Format](https://example.com)
+Create a new file named <mark>your-subdomain.json</mark> in <mark>domains/</mark> directory following all the valid rules listed in [Request Format](@/quickstart/format/index.md).
 
 </li>
 <li>
@@ -40,4 +40,4 @@ Patiently wait while a maintainer or a reviewer verifies your PR and merge it. M
 Do NOT spam maintainers on Discord, GitHub, or any other social platforms to review your PR. Doing so will lead to further intentional delay of your PR review and in some cases… a _ban_ from our service.
 {% end %}
 
-In the meantime, you may join our [Discord Server](https://discord.com) for any questions or discussions!
+In the meantime, you may join our [Discord Server](https://discord.gg/EMWUTgegDm) for any questions or discussions!
