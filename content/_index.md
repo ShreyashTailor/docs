@@ -30,5 +30,7 @@ For our Quick Start guide you can click [here](@/quickstart/guide/index.md) to r
 
 - [Github Pages](@/guides/github/index.md)
 - [Cloudflare Pages](@/guides/cloudflare/index.md)
+- [Discord](@/guides/discord/index.md)
+- [ImprovMX](@/guides/improvmx/index.md)
 
 More guides will be added soon.

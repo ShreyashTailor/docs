@@ -207,6 +207,8 @@ links = [
 	{ name = "Guides", menu = [
 		{ url = "@/guides/github/index.md", name = "Github Pages" },
 		{ url = "@/guides/cloudflare/index.md", name = "Cloudflare" },
+		{ url = "@/guides/discord/index.md", name = "Discord" },
+        { url = "@/guides/improvmx/index.md", name = "ImprovMX" },
 
 	] },
 # 	{ url = "https://daudix.one/coffee/", name = "Coffee" }
