@@ -1,17 +1,104 @@
 +++
-title = "Cloudflare Pages Setup"
-description = "Learn how to setup up your domain on Cloudflare Pages"
-authors = ["tr1x_em"]
+title = "Cloudflare Setup"
+description = "Learn how to setup up your domain on Cloudflare Services"
+authors = ["randomboi404"]
 date = 2025-12-20
 insert_anchor_links = "left"
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate sem odio, id ultricies felis condimentum et. Curabitur vel varius orci, ac fringilla magna. Etiam tempus augue tincidunt sollicitudin eleifend. In nec mattis urna. Quisque risus felis, viverra ac tincidunt sit amet, luctus sit amet lacus. Ut porta urna vel sem viverra pretium. Maecenas ac leo fringilla, feugiat elit eget, ultrices nunc. Donec lacus ligula, pharetra eget erat in, cursus congue nisi. Pellentesque vel eleifend massa, varius cursus erat. Nulla lacus nisl, faucibus at velit sit amet, sollicitudin varius elit. Nam volutpat ipsum sem, ut auctor magna maximus non.
+# Cloudfare Services
 
-In hac habitasse platea dictumst. Quisque congue elit eu molestie pellentesque. Curabitur tempus fermentum elit non dignissim. Nulla eget maximus purus, vel vulputate odio. Nullam ut viverra lectus, ut rhoncus quam. Morbi libero dolor, malesuada eu rutrum id, efficitur eu felis. Duis mollis tortor turpis, ut egestas ex elementum nec. Cras sapien libero, fringilla nec orci vitae, consectetur euismod magna. Nunc ullamcorper sapien sit amet ex convallis feugiat. Proin interdum volutpat lacus quis tristique. Sed pellentesque quis orci a interdum. Suspendisse sollicitudin dolor eu eros finibus consequat eget eu lectus. Duis eget neque lectus.
+## Using Cloudfare Pages
 
-Sed placerat leo fringilla mollis aliquet. Etiam posuere tellus nulla, vitae consectetur risus accumsan ut. Fusce consectetur accumsan quam. Morbi mauris arcu, bibendum quis interdum cursus, tristique eu risus. Donec id iaculis felis. Aliquam id nisi a risus pellentesque pharetra et sed lectus. Morbi nec rhoncus urna. Quisque tempor tristique efficitur. Praesent placerat turpis sit amet justo rhoncus, at tristique tellus elementum. Nulla mauris mauris, imperdiet quis nisl sit amet, dictum suscipit nisi. Quisque congue vulputate vestibulum. Praesent auctor est eu dolor sagittis semper. Phasellus scelerisque magna nec dictum imperdiet.
+- Create your cloudfare pages using the [docs](https://developers.cloudflare.com/pages) and deploy it normally.
+- In your Pages project settings, copy the default pages domain. (e.g. `your-project-pages.dev`)
+- Add a CNAME record in your subdomain json file:
 
-Quisque eros metus, ullamcorper id interdum in, hendrerit id nisi. Nullam feugiat pharetra quam quis euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam fermentum elit quis porta commodo. Nunc quis libero rutrum, dictum eros sed, viverra velit. Morbi blandit tincidunt nisi, nec feugiat libero vehicula vel. Aliquam a fringilla nulla. Sed maximus est at vulputate porttitor. Vestibulum maximus dolor quis sem tincidunt, vel ullamcorper metus varius. Pellentesque varius, sem et semper faucibus, metus nisl consequat justo, sed semper arcu ligula non lorem. Proin id ante luctus, tempus ipsum vitae, ultrices mi. In viverra, purus sit amet faucibus volutpat, nunc sem accumsan felis, a elementum mi ligula ac ipsum. Maecenas tempus enim condimentum augue rhoncus, eget efficitur neque rhoncus. Nunc id nisl vitae tellus lacinia posuere. Cras at sollicitudin leo. Ut viverra magna non facilisis dictum.
+```json
+{
+    "type": "CNAME",
+    "name": "example",
+    "value": "your-project.pages.dev",
+    "proxied": true
+}
+```
 
-Duis porttitor orci et fermentum rutrum. Curabitur nec leo id arcu facilisis tristique et vitae felis. Pellentesque imperdiet interdum tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean bibendum felis sed viverra pharetra. Vivamus vel tortor viverra, molestie massa quis, cursus tellus. Mauris ac nibh quis lorem consectetur tempor. Maecenas quis ornare felis. Donec felis nisi, scelerisque sed diam vel, mollis egestas metus. Phasellus in est scelerisque, posuere ipsum quis, egestas est. Ut malesuada lectus vulputate velit vehicula faucibus. Nam lorem dolor, mollis malesuada molestie quis, viverra sed risus. Vivamus laoreet, tellus at eleifend tristique, mauris neque mattis nunc, in tempor magna lacus et metus.
+- Submit the PR and wait for the approval.
+- Once merged, go back to Cloudflare Pages → Custom Domains and add:
+  `example.is-an-ai.dev`
+
+{% alert(note=true) %}
+
+- The record must be proxied.
+  {% end %}
+
+## Using Cloudfare Workers
+
+- Create and configure your cloudfare worker using the [docs](https://developers.cloudflare.com/workers).
+- Deploy the worker so it is accessible at:
+  `your-worker.your-account.workers.dev`
+- Add a CNAME record in your subdomain json file pointing to the domain of worker:
+
+```json
+{
+    "type": "CNAME",
+    "name": "example",
+    "value": "your-worker.your-account.workers.dev",
+    "proxied": true
+}
+```
+
+- Submit the PR and wait for the approval.
+- Once merged, go back to Cloudflare Dashboard → Workers → Custom Domains and add:
+  `example.is-an-ai.dev`
+
+{% alert(note=true) %}
+
+- The record must be proxied.
+  {% end %}
+
+{% alert(warning=true) %}
+
+- Workers must serve legitimate content.
+- Abuse, scraping, phishing, or tunneling will lead to removal.
+  {% end %}
+
+## Using Cloudflare Tunnel (cloudflared)
+
+- Create a tunnel using `cloudflared`. (Visit [docs](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel) for more info)
+- Cloudflare will generate a tunnel domain like:
+  `<uuid>.cfargotunnel.com`
+- Add a CNAME record in your subdomain json file:
+
+```json
+{
+    "type": "CNAME",
+    "name": "panel",
+    "value": "<uuid>.cfargotunnel.com",
+    "proxied": true
+}
+```
+
+{% alert(note=true) %}
+
+- The record must be proxied.
+  {% end %}
+
+{% alert(warning=true) %}
+
+- No private dashboards are allowed.
+- No admin panels are allowed.
+- No internal services are allowed.
+- Service must be publicly accessible.
+  {% end %}
+
+# Restricted Services
+
+The below cloudfare services are STRICTLY forbidden to use:
+
+- Cloudflare Registrar
+- Custom Nameservers (NS) without approval
+- Cloudflare Spectrum
+- Cloudflare Load Balancers
+- Cloudflare SaaS delegation
+- Email routing via NS delegation
