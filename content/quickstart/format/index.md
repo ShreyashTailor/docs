@@ -80,7 +80,7 @@ All the DNS records expect 3 compulsory values: `type`, `name` and `value`. Thei
 {
     "type": "A",
     "name": "my-app",
-    "value": ["192.0.2.1"]
+    "value": "192.0.2.1"
 }
 ```
 
@@ -90,7 +90,7 @@ All the DNS records expect 3 compulsory values: `type`, `name` and `value`. Thei
 {
     "type": "AAAA",
     "name": "ipv6-site",
-    "value": ["2001:db8:85a3:0000:0000:8a2e:0370:7334"]
+    "value": "2001:db8:85a3:0000:0000:8a2e:0370:7334"
 }
 ```
 
