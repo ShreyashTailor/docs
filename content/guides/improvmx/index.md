@@ -13,19 +13,19 @@ insert_anchor_links = "left"
 {
     "type": "MX",
     "name": "example",
-    "value": "mx1.improvmx.com",
+    "target": "mx1.improvmx.com",
     "priority": 10
 },
 {
     "type": "MX",
     "name": "example",
-    "value": "mx2.improvmx.com",
+    "target": "mx2.improvmx.com",
     "priority": 20
 },
 {
     "type": "TXT",
     "name": "example",
-    "value": "v=spf1 include:spf.improvmx.com ~all"
+    "target": "v=spf1 include:spf.improvmx.com ~all"
 }
 ```
 
